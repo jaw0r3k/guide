@@ -11,6 +11,10 @@ const config = defineUserConfig<DefaultThemeOptions, ViteBundlerOptions>({
 	title: 'discord.js Guide',
 	description: 'Imagine a guide... that explores the many possibilities for your discord.js bot.',
 	head: [
+		['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
+		['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+		['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+		['link', { rel: 'apple-touch-icon', href: '/meta-image.png' }],	
 		['meta', { charset: 'utf-8' }],
 		['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
 		['link', { rel: 'icon', href: '/favicon.png' }],
@@ -46,7 +50,13 @@ const config = defineUserConfig<DefaultThemeOptions, ViteBundlerOptions>({
 			mediumZoom: false,
 		},
 	},
-	plugins: [],
+	plugins: [[
+		'@vuepress/pwa',
+		{
+		  mode: 'CacheFirst'
+		}
+	]
+	],
 });
 
 const { ALGOLIA_DOCSEARCH_API_KEY, ALGOLIA_DOCSEARCH_APP_ID, GOOGLE_ANALYTICS_ID, NODE_ENV } = process.env;

@@ -1,0 +1,21 @@
+{
+  "name": "discord.js Guide",
+  "short_name": "djs Guide",
+  "description": "Imagine a guide... that explores the many possibilities for your discord.js bot.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#3eaf7c",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "100x100",
+      "type": "image/png"
+    },
+    {
+      "src": "meta-image.png",
+      "sizes": "500x500",
+      "type": "image/png"
+    }
+  ]
+}
