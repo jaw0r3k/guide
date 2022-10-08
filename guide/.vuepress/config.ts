@@ -2,7 +2,6 @@ import path from 'path';
 import { defineUserConfig } from 'vuepress-vite';
 import type { DefaultThemeOptions, ViteBundlerOptions } from 'vuepress-vite';
 import sidebar from './sidebar';
-import { pwaPlugin } from '@vuepress/plugin-pwa'
 const config = defineUserConfig<DefaultThemeOptions, ViteBundlerOptions>({
 	bundler: '@vuepress/vite',
 	templateDev: path.join(__dirname, 'templates', 'index.dev.html'),
